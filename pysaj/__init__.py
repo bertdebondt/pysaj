@@ -49,7 +49,7 @@ class Sensors(object):
         self.__s = []
         self.add(
             (
-                Sensor("p-ac", 11, 23, "", "current_power", "W"),
+                Sensor("p-ac", 11, 23, "", "current_ac_power", "W"),
                 Sensor("e-today", 3, 3, "/100", "today_yield", "kWh", True),
                 Sensor("e-total", 1, 1, "/100", "total_yield", "kWh", False,
                        True),
@@ -59,7 +59,21 @@ class Sensors(object):
                        True),
                 Sensor("temp", 20, 32, "/10", "temperature", "°C"),
                 Sensor("state", 22, 34, "", "state"),
-                Sensor("maxPower", -1, -1, "", "today_max_current", "W", True)
+                Sensor("maxPower", -1, -1, "", "today_max_current", "W", True),
+                Sensor("v-dc1", 5, -1, "/10", "current_dc1_voltage", "V"),
+                Sensor("c-dc1", 6, -1, "/100", "current_dc1_current", "A"),
+                Sensor("v-dc2", 7, -1, "/10", "current_dc2_voltage", "V"),
+                Sensor("c-dc2", 8, -1, "/100", "current_dc2_current", "A"),
+                Sensor("v-dc3", 9, -1, "/10", "current_dc3_voltage", "V"),
+                Sensor("c-dc3", 10, -1, "/100", "current_dc3_current", "A"),
+                Sensor("f-ac", 12, -1, "/100", "current_ac_frequency", "Hz"),
+                Sensor("v-ac1", 13, -1, "/10", "current_ac1_voltage", "V"),
+                Sensor("c-ac1", 14, -1, "/100", "current_ac1_current", "A"),
+                Sensor("v-ac2", 15, -1, "/10", "current_ac2_voltage", "V"),
+                Sensor("c-ac2", 16, -1, "/100", "current_ac2_current", "A"),
+                Sensor("v-ac3", 17, -1, "/10", "current_ac3_voltage", "V"),
+                Sensor("c-ac3", 18, -1, "/100", "current_ac3_current", "A"),
+                Sensor("v-bus", 19, -1, "/10", "current_bus_voltage", "V")
             )
         )
 
